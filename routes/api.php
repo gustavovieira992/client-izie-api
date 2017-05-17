@@ -23,6 +23,7 @@ Route::group(array('prefix' => 'v1', 'middleware' => []), function () {
     Route::get('clients', ['uses' => 'ClientController@listV1']);
     Route::get('client/{id}', ['uses' => 'ClientController@find']);
     Route::post('clients', ['uses' => 'ClientController@storeV1']);
+    Route::post('upload', ['uses' => 'UploadController@upload']);
 });
 
 Route::group(array('prefix' => 'v2', 'middleware' => []), function () {
